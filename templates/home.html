@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">Welcome to TravelBuddy</h1>
+    <p class="lead">Find travel companions for your next adventure!</p>
+    
+    {% if not current_user.is_authenticated %}
+    <div class="mt-4">
+        <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg mx-2">Sign Up</a>
+        <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg mx-2">Login</a>
+    </div>
+    {% else %}
+    <div class="mt-4">
+        <a href="{{ url_for('create_trip') }}" class="btn btn-primary btn-lg">Create a Trip</a>
+    </div>
+    {% endif %}
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <h3>Find Travel Buddies</h3>
+        <p>Connect with like-minded travelers who share your destination and interests.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>Plan Together</h3>
+        <p>Create and share travel plans, coordinate schedules, and split expenses.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>Travel Safely</h3>
+        <p>Verified profiles and safety features to ensure a secure travel experience.</p>
+    </div>
+</div>
+{% endblock %}

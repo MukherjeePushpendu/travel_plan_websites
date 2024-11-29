@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">Register</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <h4 class="mb-3">Account Information</h4>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+
+                    <h4 class="mb-3 mt-4">Basic Information</h4>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="age" class="form-label">Age</label>
+                            <input type="number" class="form-control" id="age" name="age" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select class="form-select" id="gender" name="gender" required>
+                                <option value="">Choose...</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3 mt-4">Travel Preferences</h4>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="current_city" class="form-label">Current City</label>
+                            <input type="text" class="form-control" id="current_city" name="current_city" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="budget_range" class="form-label">Budget Range</label>
+                            <select class="form-select" id="budget_range" name="budget_range" required>
+                                <option value="">Choose...</option>
+                                <option value="budget">Budget</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="travel_style" class="form-label">Travel Style</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="travel_style" value="adventure" id="style_adventure">
+                                    <label class="form-check-label" for="style_adventure">Adventure</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="travel_style" value="leisure" id="style_leisure">
+                                    <label class="form-check-label" for="style_leisure">Leisure</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="travel_style" value="cultural" id="style_cultural">
+                                    <label class="form-check-label" for="style_cultural">Cultural</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="interests" class="form-label">Interests</label>
+                        <textarea class="form-control" id="interests" name="interests" rows="3" placeholder="Tell us about your interests..."></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="preferred_destinations" class="form-label">Preferred Destinations</label>
+                        <textarea class="form-control" id="preferred_destinations" name="preferred_destinations" rows="2" placeholder="List your preferred destinations..."></textarea>
+                    </div>
+
+                    <h4 class="mb-3 mt-4">Safety Information</h4>
+                    <div class="mb-3">
+                        <label for="emergency_contact" class="form-label">Emergency Contact</label>
+                        <input type="text" class="form-control" id="emergency_contact" name="emergency_contact" placeholder="Name and phone number">
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                Already have an account? <a href="{{ url_for('login') }}">Login here</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
