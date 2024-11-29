@@ -1,59 +1,47 @@
-# TravelBuddy
+# Travel Buddy - Your Ultimate Travel Companion
 
-A simple web application to help solo travelers connect and plan trips together.
+A comprehensive travel companion application to help solo travelers connect, plan trips, and share experiences safely.
 
 ## Features
 
-- User registration and authentication
-- Create and manage trips
-- View trips dashboard
-- Simple and intuitive interface
+- User Authentication and Profile Management
+- Trip Planning and Itinerary Management
+- Travel Buddy Matching
+- Expense Tracking and Budget Management
+- Transport Coordination
+- Interactive Trip Planning Interface
 
-## Prerequisites
+## Tech Stack
 
-- Python 3.9 or higher
-- Docker (optional)
+- Backend: Python with Flask
+- Database: SQLite with SQLAlchemy ORM
+- Frontend: HTML, Bootstrap
+- Authentication: Flask-Login
 
-## Running Locally
+## Installation
 
-1. Install dependencies:
+1. Clone the repository:
+```bash
+git clone https://github.com/MukherjeePushpendu/travel_plan_websites.git
+cd travel_plan_websites
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run the application:
+3. Run the application:
 ```bash
 python app.py
 ```
 
-The application will be available at http://localhost:5000
+4. Access the application at http://localhost:5000
 
-## Running with Docker
+## Contributing
 
-1. Build the Docker image:
-```bash
-docker build -t travel-buddy .
-```
+Feel free to contribute to this project by submitting pull requests or reporting issues.
 
-2. Run the container:
-```bash
-docker run -p 5000:5000 travel-buddy
-```
+## License
 
-The application will be available at http://localhost:5000
-
-## Project Structure
-
-- `app.py`: Main application file with routes and models
-- `requirements.txt`: Python dependencies
-- `templates/`: HTML templates
-  - `base.html`: Base template with common elements
-  - `home.html`: Landing page
-  - `register.html`: User registration form
-  - `login.html`: Login form
-  - `dashboard.html`: User dashboard showing trips
-  - `create_trip.html`: Form to create new trips
-
-## Database
-
-The application uses SQLite as the database, which is stored in `travelbuddy.db`. The database will be automatically created when you first run the application.
+This project is licensed under the MIT License.
